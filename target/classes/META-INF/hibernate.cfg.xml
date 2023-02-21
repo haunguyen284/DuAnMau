@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+  "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+  "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">
+            com.microsoft.sqlserver.jdbc.SQLServerDriver
+        </property>
+        <property name="hibernate.connection.url">
+            jdbc:sqlserver://localhost:1433;databaseName=FINALASS_FPOLYSHOP_FA22_SOF205__SOF2041;;encrypt=true;trustservercertificate=true;
+        </property>
+        <property name="hibernate.connection.username">
+            SA
+        </property>
+        <property name="hibernate.connection.password">
+            Nguyen@123
+        </property>
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.SQLServer2008Dialect
+        </property>
+        <property name="show_sql">true</property>
+        <mapping class="model.ChucVu"/>
+        <mapping class="model.CuaHang"/>
+        <mapping class="model.DongSanPham"/>
+        <mapping class="model.HoaDon"/>
+        <mapping class="model.KhachHang"/>
+        <mapping class="model.MauSac"/>
+        <mapping class="model.NhaSanXuat"/>
+        <mapping class="model.NhanVien"/>
+        <mapping class="model.SanPham"/>
+    </session-factory>
+</hibernate-configuration>
